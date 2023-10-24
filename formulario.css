@@ -4,7 +4,7 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #00240f;
+    color: #000000;
 }
 
 #inicio,
@@ -57,7 +57,8 @@ form {
     width: 300px;
 
     padding: 20px;
-    border: 2px solid #EC0000;
+    border: 2px solid #ebeaea;
+    box-shadow: 0px 2px 5px -1px #dbdbdb;
     border-radius: 15px;
 
     font-weight: bold;
@@ -74,8 +75,9 @@ textarea {
 }
 
 input::placeholder {
-    color: #9ab1a3;
+    color: #c7c7c7;
     background-color: #ffffff;
+    font-size: 12px;;
 }
 
 input:focus,
