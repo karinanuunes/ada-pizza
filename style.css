@@ -161,14 +161,7 @@ footer {
 @media (max-width: 500px) {
     body {
         width: max-content;
-        max-width: 668px;
-    }
-
-    hero {
         max-width: 500px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
     }
 
     .title-hero {
