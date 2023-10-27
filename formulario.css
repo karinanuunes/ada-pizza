@@ -55,8 +55,7 @@ nav a:hover{
 
 main {
     flex-direction: column;
-    padding-top: 200px;
-    height: 380px;
+    padding-top: 100px;
 }
 
 main div {
@@ -114,7 +113,7 @@ footer {
 }
 
 @media (max-width: 500px) {
-    body, footer {
+    body {
         width: max-content;
         max-width: 500px;
     }
@@ -131,5 +130,14 @@ footer {
 
     form {
         max-width: 300px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content:end;
+        align-items: flex-end;
+        text-align: center;
+        margin: 0
     }
 }

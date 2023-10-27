@@ -174,12 +174,12 @@ footer {
     body {
         width: max-content;
         max-width: 500px;
+        padding-top: 10px;
     }
 
     #inicio {
         display: flex;
         flex-direction: column;
-        margin: 10px;
         padding-bottom: 10px;
     }
 
