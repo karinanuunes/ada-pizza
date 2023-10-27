@@ -174,13 +174,13 @@ footer {
     body {
         width: max-content;
         max-width: 500px;
-        border: 10px solid #ffffff;
     }
 
     #inicio {
         display: flex;
         flex-direction: column;
         padding-bottom: 10px;
+        height: 70px;
     }
 
     .title-hero {

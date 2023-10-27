@@ -116,13 +116,12 @@ footer {
     body {
         width: max-content;
         max-width: 500px;
-        border: 10px solid #ffffff;
     }
 
     #inicio {
         display: flex;
         flex-direction: column;
-        margin: 5px;
+        height: 70px;
     }
 
     main {
