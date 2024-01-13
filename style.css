@@ -109,7 +109,7 @@ div {
 #menu div {
   border: 1px solid #bdbdbd;
   border-radius: 100px 100px 10px 10px;
-  box-shadow: 0px 2px 5px -1px #bdbdbd;
+  box-shadow: 0px 2px 5px -1px #2a5a2d;
 
   width: 200px;
   padding: 10px;
@@ -123,13 +123,13 @@ div {
   margin-bottom: 30px;
   text-align: center;
   width: 100%;
-  background-color: #f1f1f1;
+  background-color: #2a5a2d;
 }
 
 td,
 caption,
 th {
-  color: #000000;
+  color: #ffffff;
   padding: 10px;
 }
 
@@ -154,7 +154,7 @@ form {
 
   padding: 50px;
   border: 2px solid #ebeaea;
-  box-shadow: 0px 2px 5px -1px #dbdbdb;
+  box-shadow: 0px 2px 5px -1px #2a5a2d;
   border-radius: 15px;
   gap: 5px;
 
@@ -203,18 +203,8 @@ footer {
 }
 
 @media (max-width: 700px) {
-  .title-hero {
-    font-size: 15px;
-  }
-
   .title-hero h2 {
     font-size: 35px;
-  }
-
-  .title-hero a {
-    font-size: 18px;
-    width: 100px;
-    height: 30px;
   }
 
   img {
@@ -244,41 +234,5 @@ footer {
     flex-direction: column;
     padding-bottom: 10px;
     height: 70px;
-  }
-
-  .title-hero {
-    font-size: 15px;
-  }
-
-  .title-hero h2 {
-    font-size: 35px;
-  }
-
-  .title-hero a {
-    font-size: 18px;
-    width: 100px;
-    height: 30px;
-  }
-
-  img {
-    width: 350px;
-  }
-
-  #menu h2 {
-    font-size: 24px;
-  }
-
-  section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  table {
-    width: 400px;
-  }
-
-  footer {
-    max-width: 500px;
   }
 }
