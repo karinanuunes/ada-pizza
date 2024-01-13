@@ -13,6 +13,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  text-align: center;
 }
 
 #inicio {
@@ -62,20 +63,12 @@ hero {
   width: 100%;
 }
 
-.title-hero h2 {
-  font-size: 50px;
-}
-
 #menu {
   display: flex;
   flex-direction: column;
-  margin-top: 40px;
+  border-top: 60px solid #ffffff;
   justify-content: space-evenly;
   align-items: center;
-}
-
-#menu img {
-  max-width: 200px;
 }
 
 .aj-img {
@@ -83,12 +76,8 @@ hero {
   width: 150px;
 }
 
-#menu h2 {
+h2 {
   font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 
 section {
@@ -107,9 +96,10 @@ div {
 }
 
 #menu div {
-  border: 1px solid #bdbdbd;
+  border: 1px solid #2a5a2d;
   border-radius: 100px 100px 10px 10px;
   box-shadow: 0px 2px 5px -1px #2a5a2d;
+  background-color: #ffffff;
 
   width: 200px;
   padding: 10px;
@@ -119,11 +109,16 @@ div {
 }
 
 #tabela {
-  margin-top: 60px;
-  margin-bottom: 30px;
+  border-top: 60px solid #ffffff;
+  border-bottom: 60px solid #ffffff;
+  padding: 20px;
   text-align: center;
   width: 100%;
   background-color: #2a5a2d;
+}
+
+table {
+  width: 400px;
 }
 
 td,
@@ -153,7 +148,7 @@ form {
   width: 500px;
 
   padding: 50px;
-  border: 2px solid #ebeaea;
+  border: 2px solid #2a5a2d;
   box-shadow: 0px 2px 5px -1px #2a5a2d;
   border-radius: 15px;
   gap: 5px;
@@ -249,5 +244,9 @@ footer {
     padding-top: 20px;
     padding-bottom: 10px;
     height: 70px;
+  }
+
+  hero {
+    padding-top: 80px;
   }
 }
