@@ -30,5 +30,8 @@ opcoesPizza(casa);
 opcoesPizza(bacon);
 opcoesPizza(frango);
 opcoesPizza(lombo);
+opcoesPizza(mussarela);
+opcoesPizza(marguerita);
+opcoesPizza(brasileira);
 opcoesPizza(banana);
 opcoesPizza(chocolate);

@@ -72,8 +72,35 @@ const lombo = new Pizza(
   "Feito com lombo com catupiry e orégano."
 );
 
-const banana = new Pizza(
+const mussarela = new Pizza(
   8,
+  "Pizza de mussarela",
+  "img/pizza1.png",
+  "Pequeno",
+  "35.00",
+  "Feito com molho de tomate fresco, oregáno e muuuita mussarela"
+);
+
+const marguerita = new Pizza(
+  9,
+  "Pizza de marguerita",
+  "img/pizza9.png",
+  "Pequeno",
+  "35.00",
+  "Feito com molho de tomate fresco, queijo mussarula, rodelas de tomate e manjericão"
+);
+
+const brasileira = new Pizza(
+  10,
+  "Pizza brasileira",
+  "img/pizza4.png",
+  "Pequeno",
+  "35.00",
+  "Feito com molho de tomate, mussarela, calabresa picada, palmito, champignon, azeitonas e orégano"
+);
+
+const banana = new Pizza(
+  11,
   "Pizza de banana com canela",
   "img/pizza7.png",
   "Pequeno",
@@ -82,7 +109,7 @@ const banana = new Pizza(
 );
 
 const chocolate = new Pizza(
-  9,
+  12,
   "Pizza de chocolate com morangos",
   "img/pizza8.png",
   "Pequeno",
