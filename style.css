@@ -63,6 +63,10 @@ hero {
   width: 100%;
 }
 
+.title-hero h1 {
+  font-size: 50px;
+}
+
 #menu {
   display: flex;
   flex-direction: column;
@@ -189,17 +193,27 @@ footer {
 }
 
 #escolha {
-  justify-content: center;
-  align-items: center;
-  width: 500px;
+  width: 600px;
   position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   transition: all 0.5s;
-
   background-color: #ffffff;
+  border: 3px solid #ec0000;
+  border-radius: 60px;
+  box-shadow: 0 4px 0 0 #ec0000;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 20px;
+}
+
+#botaoCompra {
+  margin-top: 5px;
+}
+
+#botaoCancelar {
+  background-color: #ffffff;
+  border: none;
 }
 
 @media (max-width: 950px) {

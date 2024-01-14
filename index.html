@@ -38,7 +38,7 @@
 
     <hero>
       <div class="title-hero">
-        <h2>Sexta da Pizza!</h2>
+        <h1>Sexta da Pizza!</h1>
         <p>Que tal uma pizza deliciosa?</p>
         <a href="#" class="btn-vermelho">Peça já!</a>
       </div>
@@ -52,7 +52,17 @@
       <section></section>
     </main>
 
-    <div id="escolha" style="display: none"></div>
+    <div id="escolha" style="display: none">
+      <img id="imagemPizza" src="" />
+      <div id="descricao">
+        <h2 id="nomePizza"></h2>
+        <p id="tamanhoPizza"></p>
+        <p id="precoPizza"></p>
+        <p id="descricaoPizza"></p>
+        <button id="botaoCompra" onclick="exibirInformacoesPizza()"></button>
+        <button id="botaoCancelar"></button>
+      </div>
+    </div>
 
     <div id="tabela">
       <table>
