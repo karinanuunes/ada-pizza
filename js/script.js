@@ -43,40 +43,57 @@ opcoesPizza(banana);
 opcoesPizza(chocolate);
 
 function exibirInformacoesPizza(pizza) {
-  let divEscolha = document.getElementById("escolha");
-  let h2Nome = document.getElementById("nomePizza");
-  let imgPizza = document.getElementById("imagemPizza");
-  let tamanhoPizza = document.getElementById("tamanhoPizza");
-  let precoPizza = document.getElementById("precoPizza");
-  let descricaoPizza = document.getElementById("descricaoPizza");
-  let botaoCompra = document.getElementById("botaoCompra");
-  let botaoCancelar = document.getElementById("botaoCancelar");
-  let botaoAdd = document.getElementById("adicionar");
+  const divEscolha = document.getElementById("escolha");
+  const h2Nome = document.getElementById("nomePizza");
+  const imgPizza = document.getElementById("imagemPizza");
+  const tamanhoPizza = document.getElementById("tamanhoPizza");
+  const precoPizza = document.getElementById("precoPizza");
+  const descricaoPizza = document.getElementById("descricaoPizza");
+  const botaoCompra = document.getElementById("botaoCompra");
+  const botaoCancelar = document.getElementById("botaoCancelar");
+  const botaoAdd = document.getElementById("adicionar");
+  const menu = document.getElementById("menu");
 
   botaoAdd.addEventListener("click", () => {
     h2Nome.textContent = pizza.nome;
     imgPizza.src = pizza.imagem;
-    tamanhoPizza.textContent = `Tamanho: ${pizza.tamanho[0]}`;
-    precoPizza.textContent = `Preço: $${pizza.preco[0]}`;
-    descricaoPizza.textContent = pizza.descricao;
+    tamanhoPizza.innerHTML = `Tamanhos: <br><button id="botaoP" class="botaoTamanho">${pizza.tamanho[0]}</button> <button id="botaoM" class="botaoTamanho">${pizza.tamanho[1]}</button> <button id="botaoG" class="botaoTamanho">${pizza.tamanho[2]}</button>`;
+    precoPizza.innerHTML = `Selecione o tamanho para visualisar o preço`;
 
+    const botaoP = document.getElementById("botaoP");
+    botaoP.addEventListener("click", () => {
+      precoPizza.innerHTML = `Preço: R$ ${pizza.preco[0].toFixed(2)}`;
+    });
+    const botaoM = document.getElementById("botaoM");
+    botaoM.addEventListener("click", () => {
+      precoPizza.innerHTML = `Preço: R$ ${pizza.preco[1].toFixed(2)}`;
+    });
+    const botaoG = document.getElementById("botaoG");
+    botaoG.addEventListener("click", () => {
+      precoPizza.innerHTML = `Preço: R$ ${pizza.preco[2].toFixed(2)}`;
+    });
+
+    descricaoPizza.textContent = pizza.descricao;
     botaoCompra.textContent = "Comprar";
     botaoCompra.classList.add("btn-vermelho");
     botaoCancelar.textContent = "Cancelar";
 
     divEscolha.style.display = "grid";
+    menu.style.opacity = "0.5";
   });
 
   botaoCancelar.addEventListener("click", () => {
-    divEscolha.style.display = "none";
     h2Nome.textContent = "";
     imgPizza.src = "";
     tamanhoPizza.textContent = "";
     precoPizza.textContent = "";
     descricaoPizza.textContent = "";
+
+    divEscolha.style.display = "none";
+    menu.style.opacity = "1";
   });
 }
 
 // Fase de teste
-// exibirInformacoesPizza(calabresa);
+exibirInformacoesPizza(calabresa);
 // exibirInformacoesPizza(queijo4);
