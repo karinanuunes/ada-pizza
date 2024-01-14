@@ -10,6 +10,7 @@ function opcoesPizza(pizza) {
   const botao = document.createElement("button");
   botao.classList.add("btn-vermelho");
   botao.id = "btn-escolha";
+  botao.id = "adicionar";
 
   imgPizza.src = pizza.imagem;
   nomePizza.textContent = pizza.nome;
@@ -41,19 +42,6 @@ opcoesPizza(brasileira);
 opcoesPizza(banana);
 opcoesPizza(chocolate);
 
-// const botao = document.getElementById("btn-escolha");
-// botao.addEventListener("click", escolherTamanho);
-
-// function escolherTamanho() {
-//   const menuTamanho = document.getElementById("escolha");
-//   menuTamanho.style.display = "flex";
-
-//   const pizzaEscolhida = document.createElement("div");
-//   pizzaEscolhida.textContent = calabresa.nome;
-
-//   menuTamanho.appendChild(pizzaEscolhida);
-// }
-
 function exibirInformacoesPizza(pizza) {
   let divEscolha = document.getElementById("escolha");
   let h2Nome = document.getElementById("nomePizza");
@@ -63,23 +51,32 @@ function exibirInformacoesPizza(pizza) {
   let descricaoPizza = document.getElementById("descricaoPizza");
   let botaoCompra = document.getElementById("botaoCompra");
   let botaoCancelar = document.getElementById("botaoCancelar");
+  let botaoAdd = document.getElementById("adicionar");
 
-  h2Nome.textContent = pizza.nome;
-  imgPizza.src = pizza.imagem;
-  tamanhoPizza.textContent = `Tamanho: ${pizza.tamanho[0]}`;
-  precoPizza.textContent = `Preço: $${pizza.preco[0]}`;
-  descricaoPizza.textContent = pizza.descricao;
+  botaoAdd.addEventListener("click", () => {
+    h2Nome.textContent = pizza.nome;
+    imgPizza.src = pizza.imagem;
+    tamanhoPizza.textContent = `Tamanho: ${pizza.tamanho[0]}`;
+    precoPizza.textContent = `Preço: $${pizza.preco[0]}`;
+    descricaoPizza.textContent = pizza.descricao;
 
-  botaoCompra.textContent = "Comprar";
-  botaoCompra.classList.add("btn-vermelho");
-  botaoCancelar.textContent = "Cancelar";
+    botaoCompra.textContent = "Comprar";
+    botaoCompra.classList.add("btn-vermelho");
+    botaoCancelar.textContent = "Cancelar";
 
-  divEscolha.style.display = "grid";
+    divEscolha.style.display = "grid";
+  });
 
   botaoCancelar.addEventListener("click", () => {
     divEscolha.style.display = "none";
+    h2Nome.textContent = "";
+    imgPizza.src = "";
+    tamanhoPizza.textContent = "";
+    precoPizza.textContent = "";
+    descricaoPizza.textContent = "";
   });
 }
 
 // Fase de teste
 // exibirInformacoesPizza(calabresa);
+// exibirInformacoesPizza(queijo4);
