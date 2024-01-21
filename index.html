@@ -18,8 +18,8 @@
     ></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="img/icon-pizza.png" />
-    <script src="js/pizzas.js" defer></script>
-    <script src="js/script.js" defer></script>
+    <script type="module" src="js/pizzas.js" defer></script>
+    <script type="module" src="js/script.js" defer></script>
     <title>ADA PIZZA</title>
   </head>
 
@@ -40,7 +40,7 @@
       <div class="title-hero">
         <h1>Sexta da Pizza!</h1>
         <p>Que tal uma pizza deliciosa?</p>
-        <a href="#" class="btn-vermelho">Peça já!</a>
+        <a href="#menu" class="btn-vermelho">Peça já!</a>
       </div>
       <div class="image-hero">
         <img src="./img/pizza-degrade.png" alt="fundo da pizza" />
@@ -52,17 +52,7 @@
       <section></section>
     </main>
 
-    <div id="escolha" style="display: none">
-      <img id="imagemPizza" src="" />
-      <div id="descricao">
-        <h2 id="nomePizza"></h2>
-        <p id="tamanhoPizza"></p>
-        <p id="precoPizza"></p>
-        <p id="descricaoPizza"></p>
-        <button id="botaoCompra" onclick="exibirInformacoesPizza()"></button>
-        <button id="botaoCancelar"></button>
-      </div>
-    </div>
+    <div id="escolha" style="display: none"></div>
 
     <div id="tabela">
       <table>

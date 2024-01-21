@@ -1,65 +1,65 @@
-function opcoesPizza(pizza) {
+import pizzas from "./pizzas.js";
+
+function opcoesPizza() {
   const section = document.querySelector("section");
-  const divPizza = document.createElement("div");
-  const imgPizza = document.createElement("img");
-  imgPizza.classList.add("aj-img");
-  const nomePizza = document.createElement("h3");
-  const tamanhoPizza = document.createElement("p");
-  const precoPizza = document.createElement("p");
-  const descricaoPizza = document.createElement("p");
-  const botao = document.createElement("button");
-  botao.classList.add("btn-vermelho");
-  botao.id = "btn-escolha";
-  botao.id = "adicionar";
+  section.innerHTML = "";
 
-  imgPizza.src = pizza.imagem;
-  nomePizza.textContent = pizza.nome;
-  tamanhoPizza.textContent = `Tamanho ${pizza.tamanho[0]}`;
-  precoPizza.textContent = `A partir de R$${pizza.preco[0]}`;
-  descricaoPizza.textContent = pizza.descricao;
-  botao.textContent = "Adicionar";
-
-  divPizza.appendChild(imgPizza);
-  divPizza.appendChild(nomePizza);
-  divPizza.appendChild(tamanhoPizza);
-  divPizza.appendChild(precoPizza);
-  divPizza.appendChild(descricaoPizza);
-  divPizza.appendChild(botao);
-
-  section.appendChild(divPizza);
+  pizzas.forEach((pizza) => {
+    const divPizza = document.createElement("div");
+    divPizza.classList.add(pizza.id);
+    divPizza.innerHTML = `
+    <img class="aj-img" src="${pizza.imagem}">
+    <h3>${pizza.nome}</h3>
+    <p>Tamanho ${pizza.tamanho[0]}</p>
+    <p>A partir de R$${pizza.preco[0]}</p>
+    <p>${pizza.descricao}</p>
+    <button class="btn-vermelho" id="adicionar">Adicionar</button>
+    `;
+    section.appendChild(divPizza);
+  });
 }
 
-opcoesPizza(calabresa);
-opcoesPizza(queijo4);
-opcoesPizza(portuguesa);
-opcoesPizza(casa);
-opcoesPizza(bacon);
-opcoesPizza(frango);
-opcoesPizza(lombo);
-opcoesPizza(mussarela);
-opcoesPizza(marguerita);
-opcoesPizza(brasileira);
-opcoesPizza(banana);
-opcoesPizza(chocolate);
+opcoesPizza();
 
-function exibirInformacoesPizza(pizza) {
+function exibirInformacoesPizza() {
   const divEscolha = document.getElementById("escolha");
-  const h2Nome = document.getElementById("nomePizza");
-  const imgPizza = document.getElementById("imagemPizza");
-  const tamanhoPizza = document.getElementById("tamanhoPizza");
-  const precoPizza = document.getElementById("precoPizza");
-  const descricaoPizza = document.getElementById("descricaoPizza");
-  const botaoCompra = document.getElementById("botaoCompra");
-  const botaoCancelar = document.getElementById("botaoCancelar");
   const botaoAdd = document.getElementById("adicionar");
   const menu = document.getElementById("menu");
 
   botaoAdd.addEventListener("click", () => {
-    h2Nome.textContent = pizza.nome;
-    imgPizza.src = pizza.imagem;
-    tamanhoPizza.innerHTML = `Tamanhos: <br><button id="botaoP" class="botaoTamanho">${pizza.tamanho[0]}</button> <button id="botaoM" class="botaoTamanho">${pizza.tamanho[1]}</button> <button id="botaoG" class="botaoTamanho">${pizza.tamanho[2]}</button>`;
-    precoPizza.innerHTML = `Selecione o tamanho para visualisar o preço`;
+    divEscolha.style.display = "grid";
+    divEscolha.innerHTML = "";
 
+    pizzas.forEach((pizza) => {
+      divEscolha.innerHTML = `
+      <img id="imagemPizza" src="${pizza.imagem}" />
+      <div id="descricao">
+      <h2 id="nomePizza">${pizza.nome}</h2>
+      <p id="tamanhoPizza">
+      Tamanhos:
+      <br>
+      <button id="botaoP" class="botaoTamanho">${pizza.tamanho[0]}</button>
+      <button id="botaoM" class="botaoTamanho">${pizza.tamanho[1]}</button>
+      <button id="botaoG" class="botaoTamanho">${pizza.tamanho[2]}</button></p>
+      <p id="precoPizza" onclick="selecionarTamanho()">Selecione o tamanho para visualisar o preço</p>
+      <p id="descricaoPizza">${pizza.descricao}</p>
+      <button id="botaoCompra" class="btn-vermelho">Comprar</button>
+      <button id="botaoCancelar">Cancelar</button>
+      </div>
+      `;
+    });
+    menu.style.opacity = "0.5";
+
+    selecionarTamanho();
+  });
+}
+
+function selecionarTamanho() {
+  const divEscolha = document.getElementById("escolha");
+  const precoPizza = document.getElementById("precoPizza");
+  const botaoCancelar = document.getElementById("botaoCancelar");
+
+  pizzas.forEach((pizza) => {
     const botaoP = document.getElementById("botaoP");
     botaoP.addEventListener("click", () => {
       precoPizza.innerHTML = `Preço: R$ ${pizza.preco[0].toFixed(2)}`;
@@ -72,28 +72,12 @@ function exibirInformacoesPizza(pizza) {
     botaoG.addEventListener("click", () => {
       precoPizza.innerHTML = `Preço: R$ ${pizza.preco[2].toFixed(2)}`;
     });
-
-    descricaoPizza.textContent = pizza.descricao;
-    botaoCompra.textContent = "Comprar";
-    botaoCompra.classList.add("btn-vermelho");
-    botaoCancelar.textContent = "Cancelar";
-
-    divEscolha.style.display = "grid";
-    menu.style.opacity = "0.5";
   });
 
   botaoCancelar.addEventListener("click", () => {
-    h2Nome.textContent = "";
-    imgPizza.src = "";
-    tamanhoPizza.textContent = "";
-    precoPizza.textContent = "";
-    descricaoPizza.textContent = "";
-
     divEscolha.style.display = "none";
     menu.style.opacity = "1";
   });
 }
 
-// Fase de teste
-exibirInformacoesPizza(calabresa);
-// exibirInformacoesPizza(queijo4);
+exibirInformacoesPizza();
