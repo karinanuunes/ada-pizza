@@ -7,10 +7,6 @@
   color: #00240f;
 }
 
-button {
-  cursor: pointer;
-}
-
 #inicio,
 hero,
 footer {
@@ -40,6 +36,10 @@ nav {
   gap: 20px;
 }
 
+nav a {
+  border-bottom: 0.175rem solid transparent;
+}
+
 nav a:hover {
   color: #ec0000;
   border-bottom: 0.175rem solid #ec0000;
@@ -58,14 +58,20 @@ nav a:hover {
 .btn-vermelho:hover {
   color: #ffffff;
   border: none;
+  background-color: #d40101;
 }
 
 hero {
   padding-top: 50px;
-  display: flex;
   justify-content: space-evenly;
   font-size: 20px;
-  width: 100%;
+}
+
+.title-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
 
 .title-hero h1 {
@@ -96,15 +102,13 @@ section {
   margin-top: 20px;
 }
 
-div {
+#pizza {
   display: flex;
   flex-direction: column;
-  align-items: center;
   text-align: center;
+  justify-content: space-between;
   gap: 10px;
-}
 
-#menu div {
   border: 1px solid #2a5a2d;
   border-radius: 100px 100px 10px 10px;
   box-shadow: 0px 2px 5px -1px #2a5a2d;
@@ -113,17 +117,17 @@ div {
   width: 200px;
   padding: 10px;
   font-size: 14px;
-
-  justify-content: space-between;
 }
 
 #tabela {
-  border-top: 60px solid #ffffff;
-  border-bottom: 60px solid #ffffff;
-  padding: 20px;
+  display: flex;
+  justify-content: center;
   text-align: center;
   width: 100%;
+  padding: 20px;
   background-color: #2a5a2d;
+  border-top: 60px solid #ffffff;
+  border-bottom: 60px solid #ffffff;
 }
 
 table {
@@ -142,110 +146,11 @@ caption {
   font-variant: small-caps;
 }
 
-#formulario {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  gap: 10px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  width: 500px;
-
-  padding: 50px;
-  border: 2px solid #2a5a2d;
-  box-shadow: 0px 2px 5px -1px #2a5a2d;
-  border-radius: 15px;
-  gap: 5px;
-
-  font-weight: bold;
-  font-size: 14px;
-}
-
-input,
-textarea {
-  outline: none;
-  border: none;
-  padding: 5px;
-}
-
-textarea {
-  height: 100px;
-}
-
-input::placeholder {
-  color: #c7c7c7;
-  background-color: #ffffff;
-  font-size: 12px;
-}
-
-input:focus,
-textarea:focus {
-  border: 0.175rem solid #ec0000;
-  border-radius: 5px;
-  background-color: #ffffff;
-}
-
 footer {
   margin-top: 40px;
   font-size: 12px;
   width: 100%;
   height: 30px;
-}
-
-#escolha {
-  width: 650px;
-  height: 400px;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.5s;
-  background-color: #ffffff;
-  border: 3px solid #ec0000;
-  border-radius: 60px;
-  box-shadow: 0 4px 0 0 #ec0000;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 30px;
-}
-
-#botaoCompra {
-  margin-top: 5px;
-}
-
-#botaoCancelar {
-  background-color: #ffffff;
-  border: none;
-}
-
-.botaoTamanho {
-  background-color: #d9dfd9;
-  border: #00240f;
-  font-variant: small-caps;
-}
-
-.botaoTamanho:hover {
-  background-color: #ec0000;
-  color: #ffffff;
-}
-
-#botaoP {
-  border-radius: 50px 0 0 50px;
-  padding: 5px 10px;
-}
-
-#botaoM {
-  border-radius: 0;
-  padding: 5px 10px;
-}
-
-#botaoG {
-  border-radius: 0 50px 50px 0;
-  padding: 5px 10px;
 }
 
 @media (max-width: 950px) {
@@ -271,10 +176,6 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
     margin-top: 20px;
-  }
-
-  form {
-    max-width: 400px;
   }
 }
 

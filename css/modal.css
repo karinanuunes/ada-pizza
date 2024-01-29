@@ -1,0 +1,58 @@
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+#escolha {
+  width: 650px;
+  height: 400px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s;
+  background-color: #ffffff;
+  border: 3px solid #ec0000;
+  border-radius: 60px;
+  box-shadow: 0 4px 0 0 #ec0000;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 30px;
+}
+
+#botaoCompra {
+  margin-top: 5px;
+}
+
+#botaoCancelar {
+  background-color: #ffffff;
+  border: none;
+}
+
+.botaoTamanho {
+  background-color: #d9dfd9;
+  border: #00240f;
+  font-variant: small-caps;
+}
+
+.botaoTamanho:hover {
+  background-color: #ec0000;
+  color: #ffffff;
+}
+
+#botaoP {
+  border-radius: 50px 0 0 50px;
+  padding: 5px 10px;
+}
+
+#botaoM {
+  border-radius: 0;
+  padding: 5px 10px;
+}
+
+#botaoG {
+  border-radius: 0 50px 50px 0;
+  padding: 5px 10px;
+}

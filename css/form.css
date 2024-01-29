@@ -1,0 +1,53 @@
+#formulario {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+
+  padding: 50px;
+  border: 2px solid #2a5a2d;
+  box-shadow: 0px 2px 5px -1px #2a5a2d;
+  border-radius: 15px;
+  gap: 5px;
+
+  font-weight: bold;
+  font-size: 14px;
+}
+
+input,
+textarea {
+  outline: none;
+  border: 2px solid transparent;
+  padding: 5px;
+}
+
+textarea {
+  height: 100px;
+}
+
+input::placeholder {
+  color: #c7c7c7;
+  background-color: #ffffff;
+  font-size: 12px;
+}
+
+input:focus,
+textarea:focus {
+  border: 0.175rem solid #ec0000;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+@media (max-width: 700px) {
+  form {
+    max-width: 400px;
+  }
+}
