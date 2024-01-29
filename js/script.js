@@ -6,6 +6,7 @@ function opcoesPizza() {
 
   pizzas.forEach((pizza) => {
     const divPizza = document.createElement("div");
+    divPizza.id = "pizza";
     divPizza.classList.add(pizza.id);
     divPizza.innerHTML = `
     <img class="aj-img" src="${pizza.imagem}">
@@ -30,7 +31,7 @@ function exibirInformacoesPizza() {
     divEscolha.style.display = "grid";
     divEscolha.innerHTML = "";
 
-    pizzas.forEach((pizza) => {
+    pizzas.map((pizza) => {
       divEscolha.innerHTML = `
       <img id="imagemPizza" src="${pizza.imagem}" />
       <div id="descricao">
