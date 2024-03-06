@@ -20,6 +20,7 @@ div {
   box-shadow: 0 4px 0 0 #ec0000;
   grid-template-columns: repeat(2, 1fr);
   padding: 30px;
+  display: none;
 }
 
 #botaoCompra {
